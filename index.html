@@ -4,370 +4,1060 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Satyam Tiwari - CSE Student, Python Developer and aspiring software developer. Explore my projects and skills.">
-    <title>Satyam Tiwari | Developer Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <title>Satyam Tiwari | Software Developer & Data Analyst</title>
+
+    <meta name="description"
+        content="Official portfolio of Satyam Tiwari, B.Tech Computer Science student and aspiring Software Developer and Data Analyst. Explore Python projects, AI dashboards, Tableau visualizations and technical skills.">
+
+    <meta name="keywords"
+        content="Satyam Tiwari, Satyam Tiwari Portfolio, Software Developer, Data Analyst, Python Developer, AI Business Analyst, Tableau, Streamlit">
+
+    <meta name="author" content="Satyam Tiwari">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f5f8ff">
+
+    <link rel="canonical" href="https://satyamtiwari9719.github.io/">
+
+    <meta property="og:title" content="Satyam Tiwari | Professional Portfolio">
+    <meta property="og:description" content="Explore my projects, skills, education and professional journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://satyamtiwari9719.github.io/">
+    <meta property="og:image" content="https://satyamtiwari9719.github.io/profile.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Satyam Tiwari Portfolio">
+    <meta name="twitter:description" content="Software Development | Python | Data Analytics">
+    <meta name="twitter:image" content="https://satyamtiwari9719.github.io/profile.jpg">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Satyam Tiwari",
+  "url": "https://satyamtiwari9719.github.io/",
+  "image": "https://satyamtiwari9719.github.io/profile.jpg",
+  "jobTitle": "Aspiring Software Developer and Data Analyst",
+  "email": "satyam12tiwari.650@gmail.com",
+  "telephone": "+91-9599506650",
+  "sameAs": [
+    "https://www.linkedin.com/in/satyamtiwari9719",
+    "https://github.com/satyamtiwari9719"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Modinagar Institute of Technology"
+  }
+}
+</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #3867e8;
+            --secondary: #7654d9;
+            --text: #17233c;
+            --muted: #64748b;
+            --background: #f5f8ff;
+            --white: #ffffff;
+            --border: #e6ebf5;
+            --shadow: 0 12px 35px rgba(39, 67, 120, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* BUTTONS */
+
+        .btn {
+            display: inline-block;
+            padding: 12px 23px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 7px 18px rgba(56, 103, 232, 0.2);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                radial-gradient(circle at 85% 15%, #e5eaff 0, transparent 35%),
+                linear-gradient(135deg, #ffffff, #f1f5ff);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.5fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8efff;
+            color: var(--primary);
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 60px);
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero h2 {
+            font-size: 21px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 610px;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        /* PROFILE PHOTO */
+
+        .profile-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .avatar {
+            width: 190px;
+            height: 190px;
+            margin: auto auto 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 25%;
+            border: 7px solid #edf1ff;
+            box-shadow: 0 8px 25px rgba(56, 103, 232, 0.18);
+            display: block;
+        }
+
+        .profile-card h3 {
+            font-size: 21px;
+        }
+
+        .profile-card p {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 5px 0 15px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #e8f8ed;
+            color: #21834a;
+            padding: 7px 13px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading small {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-size: 35px;
+            margin: 8px 0;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            background: white;
+            padding: 38px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .about-box p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            background: #f3f6ff;
+            text-align: center;
+            padding: 22px 10px;
+            border-radius: 12px;
+        }
+
+        .stat h3 {
+            color: var(--primary);
+            font-size: 25px;
+        }
+
+        .stat p {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        /* SKILLS */
+
+        .skills-section {
+            background: #eef3ff;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: #b8c9ff;
+        }
+
+        .skill-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card h3 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .skill-card p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* PROJECTS */
+
+        .projects-section {
+            background: #eef3ff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 17px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            box-shadow: 0 5px 20px rgba(39, 67, 120, 0.04);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-icon {
+            width: 55px;
+            height: 55px;
+            background: #edf2ff;
+            border-radius: 13px;
+            display: grid;
+            place-items: center;
+            font-size: 27px;
+            margin-bottom: 17px;
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 17px;
+            flex-grow: 1;
+        }
+
+        .tech-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tech-tags span {
+            font-size: 11px;
+            background: #eef3ff;
+            color: #3867c8;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .project-link {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            max-width: 750px;
+            margin: 0 auto 18px;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .education-card h3 {
+            font-size: 19px;
+            margin: 7px 0;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .edu-label {
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            background: linear-gradient(135deg, #eaf0ff, #f8faff);
+        }
+
+        .contact-card {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .contact-card>p {
+            color: var(--muted);
+            margin: 10px 0 25px;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .contact-item {
+            padding: 16px;
+            background: #f5f7ff;
+            border-radius: 10px;
+            font-size: 13px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: white;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 28px 10px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: var(--primary);
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media(max-width:800px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .profile-card {
+                max-width: 380px;
+                margin: auto;
+                width: 100%;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            nav {
+                padding: 15px 0;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box,
+            .contact-card {
+                padding: 24px;
+            }
+
+            .avatar {
+                width: 165px;
+                height: 165px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <a href="#home" class="logo">ST<span>.</span></a>
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">ST<span>.</span></a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
-            ☰
-        </button>
-
-        <nav class="nav-links" id="navLinks">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
 
     <main>
 
-        <!-- Hero Section -->
-        <section class="hero section" id="home">
+        <!-- HOME -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
 
-            <div class="hero-content">
-                <p class="eyebrow">
-                    <span class="status-dot"></span>
-                    WELCOME TO MY PORTFOLIO
-                </p>
+                <div>
+                    <span class="tag">WELCOME TO MY PORTFOLIO</span>
 
-                <h1>
-                    Hi, I'm <span class="gradient-text">Satyam Tiwari</span>
-                </h1>
+                    <h1>Hi, I'm <span>Satyam Tiwari</span></h1>
 
-                <h2>
-                    A Computer Science Student
-                    <br>
-                    & <span id="typingText">Aspiring Developer</span>
-                </h2>
+                    <h2>Computer Science Student & Aspiring Developer</h2>
 
-                <p class="hero-description">
-                    I am a B.Tech CSE student passionate about
-                    technology, programming and building useful
-                    digital solutions. I enjoy learning new
-                    technologies and turning ideas into projects.
-                </p>
+                    <p>
+                        I am a B.Tech Computer Science and Engineering student
+                        passionate about Python programming, software development,
+                        data analytics and building useful digital solutions.
+                        I enjoy learning new technologies and turning ideas
+                        into practical projects.
+                    </p>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        Explore My Work →
-                    </a>
-
-                    <a href="#contact" class="btn btn-outline">
-                        Contact Me
-                    </a>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://github.com/satyamtiwari9719" target="_blank" rel="noopener noreferrer">
-                        GitHub ↗
-                    </a>
-
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                        LinkedIn ↗
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-image">
-                <div class="image-glow"></div>
-
-                <div class="profile-frame">
-                    <img src="profile.jpg" alt="Satyam Tiwari profile photo">
-                </div>
-
-                <div class="floating-card">
-                    <span>💻</span>
-                    <div>
-                        <strong>Always Learning</strong>
-                        <small>Building & Exploring</small>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Explore My Work →</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
                     </div>
                 </div>
-            </div>
 
+                <div class="profile-card">
+                    <img src="profile.jpg" alt="Satyam Tiwari - Professional Profile Photo" class="avatar" width="190"
+                        height="190">
+                    <h3>Satyam Tiwari</h3>
+                    <p>Computer Science & Engineering</p>
+                    <span class="status">● Open to Opportunities</span>
+                </div>
+
+            </div>
         </section>
 
-        <!-- About Section -->
-        <section class="section about" id="about">
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
 
-            <div class="section-heading">
-                <p class="eyebrow">GET TO KNOW ME</p>
-                <h2>About <span class="gradient-text">Me</span></h2>
-            </div>
+                <div class="section-heading">
+                    <small>GET TO KNOW ME</small>
+                    <h2>About Me</h2>
+                    <p>A little introduction about my journey.</p>
+                </div>
 
-            <div class="about-content">
-                <div class="about-card">
+                <div class="about-box">
                     <h3>Who Am I?</h3>
 
                     <p>
-                        Hello! I'm Satyam Tiwari, a Computer Science
-                        and Engineering student pursuing B.Tech.
-                        I have an interest in software development,
-                        Python programming and web technologies.
+                        Hello! I'm Satyam Tiwari, a B.Tech Computer Science
+                        and Engineering student at Modinagar Institute of Technology.
                     </p>
 
                     <p>
-                        I enjoy creating projects that solve
-                        practical problems. My focus is on improving
-                        my programming knowledge, learning through
-                        hands-on experience and growing as a developer.
+                        I have an interest in Python programming, software development,
+                        data analytics and web technologies. I enjoy creating
+                        projects that solve practical problems.
                     </p>
 
                     <p>
-                        I believe in continuous learning,
+                        My focus is on improving my programming knowledge,
+                        learning through hands-on experience and growing
+                        professionally as a developer.
+                    </p>
+
+                    <p>
+                        I believe in continuous learning, teamwork,
                         problem-solving and turning ideas into reality.
                     </p>
-                </div>
 
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>02+</h3>
-                        <p>Personal Projects</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3>B.Tech</h3>
-                        <p>CSE Student</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3>∞</h3>
-                        <p>Learning Mindset</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="section" id="skills">
-
-            <div class="section-heading">
-                <p class="eyebrow">MY TECHNICAL TOOLKIT</p>
-                <h2>My <span class="gradient-text">Skills</span></h2>
-                <p class="section-description">
-                    Technologies I use and continue to learn.
-                </p>
-            </div>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <span class="skill-icon">🐍</span>
-                    <h3>Python</h3>
-                    <p>Programming & Logic Building</p>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">🌐</span>
-                    <h3>HTML</h3>
-                    <p>Web Page Structure</p>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">🎨</span>
-                    <h3>CSS</h3>
-                    <p>Web Design & Styling</p>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">⚡</span>
-                    <h3>JavaScript</h3>
-                    <p>Currently Learning</p>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">📊</span>
-                    <h3>Streamlit</h3>
-                    <p>Python-based Applications</p>
-                </div>
-
-                <div class="skill-card">
-                    <span class="skill-icon">🔧</span>
-                    <h3>Git & GitHub</h3>
-                    <p>Version Control & Projects</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="section projects" id="projects">
-
-            <div class="section-heading">
-                <p class="eyebrow">WHAT I'VE BUILT</p>
-                <h2>My <span class="gradient-text">Projects</span></h2>
-                <p class="section-description">
-                    A selection of my learning and development work.
-                </p>
-            </div>
-
-            <div class="projects-grid">
-
-                <article class="project-card">
-                    <div class="project-visual study-visual">
-                        <span>📚</span>
-                        <p>STUDY PLANNER</p>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-category">PRODUCTIVITY APP</span>
-                        <h3>My Study Planner</h3>
-
-                        <p>
-                            A study management application designed
-                            to organize study schedules, manage tasks
-                            and track learning progress.
-                        </p>
-
-                        <div class="tags">
-                            <span>Python</span>
-                            <span>Streamlit</span>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>05+</h3>
+                            <p>Projects & Applications</p>
                         </div>
 
-                        <a href="https://github.com/satyamtiwari9719" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
+                        <div class="stat">
+                            <h3>B.Tech</h3>
+                            <p>Computer Science</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>∞</h3>
+                            <p>Learning Mindset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+
+                <div class="section-heading">
+                    <small>MY TECHNICAL TOOLKIT</small>
+                    <h2>My Skills</h2>
+                    <p>Technologies I use and continue to learn.</p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🐍</div>
+                        <h3>Python</h3>
+                        <p>Programming and Logic Building</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">📊</div>
+                        <h3>Data Analytics</h3>
+                        <p>Data exploration and visualization</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML</h3>
+                        <p>Web Page Structure</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>CSS</h3>
+                        <p>Web Design and Styling</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h3>JavaScript</h3>
+                        <p>Currently Learning</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">📈</div>
+                        <h3>Tableau</h3>
+                        <p>Data Visualization</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🚀</div>
+                        <h3>Streamlit</h3>
+                        <p>Python-based Applications</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🔧</div>
+                        <h3>Git & GitHub</h3>
+                        <p>Version Control and Projects</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🗄️</div>
+                        <h3>SQL</h3>
+                        <p>Currently Learning</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+
+                <div class="section-heading">
+                    <small>WHAT I'VE BUILT</small>
+                    <h2>My Projects</h2>
+                    <p>Practical applications, dashboards and development work.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-icon">📚</div>
+                        <h3>My Study Planner</h3>
+                        <p>
+                            An Android study management application designed
+                            to organize study schedules, manage tasks and
+                            track learning progress, with Firebase integration
+                            and AI-powered assistance.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Android</span>
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a class="project-link" href="https://github.com/satyamtiwari9719/My-Study-Planner"
+                            target="_blank" rel="noopener noreferrer">
                             View Project ↗
                         </a>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="project-visual pizza-visual">
-                        <span>🍕</span>
-                        <p>PIZZA PERFORMANCE</p>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-category">DATA DASHBOARD</span>
-                        <h3>Pizza Performance</h3>
-
+                    <article class="project-card">
+                        <div class="project-icon">🍕</div>
+                        <h3>Pizza Store Performance</h3>
                         <p>
-                            A Python-based dashboard project created
-                            to explore pizza sales data and present
-                            performance insights through visualizations.
+                            A Python-based business analytics dashboard
+                            created to analyze pizza sales data, explore
+                            revenue performance and present business insights.
                         </p>
-
-                        <div class="tags">
+                        <div class="tech-tags">
                             <span>Python</span>
                             <span>Streamlit</span>
+                            <span>Pandas</span>
                             <span>Data Visualization</span>
                         </div>
+                        <a class="project-link" href="https://github.com/satyamtiwari9719" target="_blank"
+                            rel="noopener noreferrer">
+                            View GitHub ↗
+                        </a>
+                    </article>
 
-                        <a href="https://github.com/satyamtiwari9719" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            View Project ↗
+                    <article class="project-card">
+                        <div class="project-icon">📊</div>
+                        <h3>AI Business Analyst</h3>
+                        <p>
+                            An interactive business analytics application
+                            that allows users to upload sales datasets and
+                            explore business performance through metrics,
+                            charts and analytical insights.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>Pandas</span>
+                            <span>Plotly</span>
+                            <span>AI</span>
+                        </div>
+                        <a class="project-link" href="https://ai-business-analyst-4dbn5dh2fsmtf9nxru4tza.streamlit.app/"
+                            target="_blank" rel="noopener noreferrer">
+                            Live Demo ↗
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-icon">🏥</div>
+                        <h3>Medical Healthcare Intelligence</h3>
+                        <p>
+                            An interactive healthcare intelligence application
+                            designed to explore healthcare-related information
+                            and present data through a user-friendly dashboard.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>Data Analytics</span>
+                            <span>Dashboard</span>
+                        </div>
+                        <a class="project-link"
+                            href="https://medintal-healthcare-intelligence-g5tffhednksjkt3rfdi28e.streamlit.app/"
+                            target="_blank" rel="noopener noreferrer">
+                            Live Demo ↗
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-icon">📈</div>
+                        <h3>Tableau Data Visualization</h3>
+                        <p>
+                            An interactive Tableau visualization project
+                            showcasing data through charts and visual
+                            storytelling to make information easier to understand.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Tableau</span>
+                            <span>Data Visualization</span>
+                            <span>Analytics</span>
+                        </div>
+                        <a class="project-link"
+                            href="https://public.tableau.com/app/profile/satyam.tiwari1544/viz/shared/SSZBF8GNM"
+                            target="_blank" rel="noopener noreferrer">
+                            View Tableau Dashboard ↗
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+            <div class="container">
+
+                <div class="section-heading">
+                    <small>MY ACADEMIC JOURNEY</small>
+                    <h2>My Education</h2>
+                    <p>My educational background.</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="edu-label">CURRENT</span>
+                    <h3>🎓 Bachelor of Technology (B.Tech)</h3>
+                    <p>Computer Science and Engineering</p>
+                    <p>Modinagar Institute of Technology</p>
+                    <p>Currently Pursuing | 7th Semester</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="edu-label">HIGHER SECONDARY</span>
+                    <h3>📘 Intermediate (Class XII)</h3>
+                    <p>Higher Secondary Education</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="edu-label">SECONDARY</span>
+                    <h3>📖 High School (Class X)</h3>
+                    <p>Secondary Education</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <small>LET'S CONNECT</small>
+                    <h2>Get In Touch</h2>
+                    <p>Have an opportunity, idea or project in mind?</p>
+                </div>
+
+                <div class="contact-card">
+
+                    <h2>Let's Start a Conversation</h2>
+
+                    <p>
+                        I'm always interested in learning,
+                        collaborating and exploring new opportunities.
+                        Feel free to connect with me.
+                    </p>
+
+                    <div class="contact-details">
+
+                        <div class="contact-item">
+                            <strong>✉️ Email</strong>
+                            <a href="mailto:satyam12tiwari.650@gmail.com">
+                                satyam12tiwari.650@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>📞 Phone 1</strong>
+                            <a href="tel:+919599506650">+91 9599506650</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>📞 Phone 2</strong>
+                            <a href="tel:+919997496650">+91 9997496650</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>💼 LinkedIn</strong>
+                            <a href="https://www.linkedin.com/in/satyamtiwari9719" target="_blank"
+                                rel="noopener noreferrer">
+                                Visit LinkedIn Profile
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>💻 GitHub</strong>
+                            <a href="https://github.com/satyamtiwari9719" target="_blank" rel="noopener noreferrer">
+                                Visit GitHub Profile
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>🌐 Portfolio</strong>
+                            <a href="https://satyamtiwari9719.github.io/">
+                                My Website
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="mailto:satyam12tiwari.650@gmail.com" class="btn btn-primary">
+                        Send Me an Email →
+                    </a>
+
+                    <div class="social-links">
+                        <a class="btn btn-outline" href="https://www.linkedin.com/in/satyamtiwari9719" target="_blank"
+                            rel="noopener noreferrer">
+                            LinkedIn ↗
+                        </a>
+
+                        <a class="btn btn-outline" href="https://github.com/satyamtiwari9719" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub ↗
                         </a>
                     </div>
-                </article>
 
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="section" id="education">
-
-            <div class="section-heading">
-                <p class="eyebrow">MY ACADEMIC JOURNEY</p>
-                <h2>My <span class="gradient-text">Education</span></h2>
-            </div>
-
-            <div class="education-list">
-
-                <div class="education-card">
-                    <div class="education-icon">🎓</div>
-                    <div>
-                        <span class="education-year">CURRENT</span>
-                        <h3>Bachelor of Technology (B.Tech)</h3>
-                        <p>Computer Science and Engineering</p>
-                        <small>Currently Pursuing</small>
-                    </div>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-icon">📘</div>
-                    <div>
-                        <h3>Intermediate (Class XII)</h3>
-                        <p>Higher Secondary Education</p>
-                    </div>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-icon">📖</div>
-                    <div>
-                        <h3>High School (Class X)</h3>
-                        <p>Secondary Education</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="section contact" id="contact">
-
-            <div class="section-heading">
-                <p class="eyebrow">LET'S CONNECT</p>
-                <h2>Get In <span class="gradient-text">Touch</span></h2>
-
-                <p class="section-description">
-                    Have an opportunity, idea or project in mind?
-                    Feel free to connect with me.
-                </p>
-            </div>
-
-            <div class="contact-card">
-                <span class="contact-icon">✉️</span>
-                <h3>Let's start a conversation</h3>
-
-                <p>
-                    I'm always interested in learning,
-                    collaborating and exploring new opportunities.
-                </p>
-
-                <!-- Replace with your real email -->
-                <a href="mailto:your-email@example.com" class="btn btn-primary">
-                    Send Me an Email →
-                </a>
-
-                <div class="contact-socials">
-                    <a href="https://github.com/satyamtiwari9719" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                    </a>
-
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                        LinkedIn
-                    </a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <a href="#home" class="logo">ST<span>.</span></a>
-
-        <p>Designed & Built by Satyam Tiwari</p>
-
-        <p>© <span id="year"></span> All Rights Reserved.</p>
+    <footer>
+        <p>Designed & Built with ❤️ by <strong>Satyam Tiwari</strong></p>
+        <p>© <span id="year"></span> Satyam Tiwari. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
 </body>
 
 </html>
